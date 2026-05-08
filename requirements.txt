@@ -1,0 +1,82 @@
+# Requirements for INVITA-WheatFieldState reviewer package
+# ========================================================
+# Core dependencies for all functionality
+
+# Progress bars and CLI utilities
+tqdm>=4.64.0
+rich>=13.0.0
+
+# HTTP client for LLM/VLM API calls
+httpx>=0.25.0
+
+# Configuration file parsing
+pyyaml>=6.0
+
+# Data processing
+pandas>=2.0.0
+streamlit>=1.37.0
+numpy>=1.24.0
+pyarrow>=14.0.0
+
+# Machine learning
+scikit-learn>=1.3.0
+lightgbm>=4.0.0
+
+# Database
+psycopg2-binary>=2.9.0
+fastapi>=0.110.0
+uvicorn>=0.30.0
+
+# File type detection
+python-magic>=0.4.27
+zstandard>=0.22.0
+
+# --------------------------------------------------
+# LLM/VLM inference (required for semantic analysis)
+# --------------------------------------------------
+vllm>=0.5.0
+transformers>=4.30.0
+torch>=2.0.0
+torchvision>=0.15.0
+accelerate>=0.20.0
+huggingface_hub>=0.20.0
+
+# FlashInfer (kernel library for LLM serving)
+flashinfer-python>=0.3.1
+
+# NVML Python bindings used by FlashInfer / pynvml
+nvidia-ml-py>=12.0.0
+
+# --------------------------------------------------
+# Optional: Geospatial and scientific data formats
+# --------------------------------------------------
+# rasterio>=1.3.0        # GeoTIFF handling
+# geopandas>=0.14.0      # Vector/shapefile handling
+# xarray>=2023.0.0       # NetCDF/multidimensional arrays
+# netCDF4>=1.6.0         # NetCDF format support
+# h5py>=3.9.0            # HDF5 format support
+# fiona>=1.9.0           # Vector data I/O
+# laspy>=2.5.0           # Point cloud (LAS) support
+
+# --------------------------------------------------
+# Optional: Document processing
+# --------------------------------------------------
+# PyMuPDF>=1.23.0        # PDF extraction
+# python-pptx>=0.6.21    # PowerPoint extraction
+# python-docx>=1.0.0     # Word document extraction
+# openpyxl>=3.1.0        # Excel support
+
+# --------------------------------------------------
+# Optional: Image processing
+# --------------------------------------------------
+Pillow>=10.0.0          # Image handling
+# opencv-python>=4.8.0   # Advanced image processing
+
+# --------------------------------------------------
+# Development dependencies
+# --------------------------------------------------
+pytest>=7.0.0
+# pytest-asyncio>=0.21.0
+# black>=23.0.0
+# ruff>=0.1.0
+# mypy>=1.0.0

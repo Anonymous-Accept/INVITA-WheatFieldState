@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>INVITA-WheatFieldState</title>
+    <meta
+      name="description"
+      content="Anonymous project page for INVITA-WheatFieldState: A Real-World Benchmark for Crop-State Estimation in Wheat Field Trials."
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body class="notebook-page">
+    <svg aria-hidden="true" width="0" height="0" style="position:absolute">
+      <symbol id="icon-wheat" viewBox="0 0 24 24">
+        <path d="M12 21V5" />
+        <path d="M12 7c-3 0-5-2-5-5 3 0 5 2 5 5Z" />
+        <path d="M12 10c3 0 5-2 5-5-3 0-5 2-5 5Z" />
+        <path d="M12 13c-3 0-5-2-5-5 3 0 5 2 5 5Z" />
+        <path d="M12 16c3 0 5-2 5-5-3 0-5 2-5 5Z" />
+      </symbol>
+      <symbol id="icon-leaf" viewBox="0 0 24 24">
+        <path d="M20 4c-8 1-14 5-16 13 6 1 13-2 16-13Z" />
+        <path d="M5 17c4-4 8-7 13-9" />
+      </symbol>
+      <symbol id="icon-cloud" viewBox="0 0 24 24">
+        <path d="M7 18h10a4 4 0 0 0 .4-8 6 6 0 0 0-11.3 2A3.5 3.5 0 0 0 7 18Z" />
+        <path d="M8 21v-1" />
+        <path d="M12 21v-1" />
+        <path d="M16 21v-1" />
+      </symbol>
+      <symbol id="icon-drone" viewBox="0 0 24 24">
+        <path d="M10 12h4" />
+        <path d="M12 10v4" />
+        <rect x="9" y="9" width="6" height="6" rx="1" />
+        <path d="M5 5h4M15 5h4M5 19h4M15 19h4" />
+        <path d="M7 5v4M17 5v4M7 15v4M17 15v4" />
+      </symbol>
+      <symbol id="icon-camera" viewBox="0 0 24 24">
+        <path d="M4 8h4l1.5-2h5L16 8h4v11H4V8Z" />
+        <circle cx="12" cy="13.5" r="3" />
+      </symbol>
+      <symbol id="icon-satellite" viewBox="0 0 24 24">
+        <path d="M9 14 4 19" />
+        <path d="m14 9 5-5" />
+        <rect x="9" y="8" width="6" height="8" rx="1" transform="rotate(45 12 12)" />
+        <path d="M5 7h4v4H5z" />
+        <path d="M15 13h4v4h-4z" />
+      </symbol>
+      <symbol id="icon-sensor" viewBox="0 0 24 24">
+        <path d="M12 21V9" />
+        <path d="M8 21h8" />
+        <circle cx="12" cy="6" r="3" />
+        <path d="M5 9a8 8 0 0 1 14 0" />
+      </symbol>
+      <symbol id="icon-clipboard" viewBox="0 0 24 24">
+        <path d="M9 4h6l1 2h3v15H5V6h3l1-2Z" />
+        <path d="M9 11h6" />
+        <path d="M9 15h4" />
+      </symbol>
+      <symbol id="icon-target" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="8" />
+        <circle cx="12" cy="12" r="3" />
+        <path d="M12 2v3M12 19v3M2 12h3M19 12h3" />
+      </symbol>
+    </svg>
+
+    <header class="variant-header">
+      <a class="variant-brand" href="#top" aria-label="INVITA-WheatFieldState home">
+        <svg class="ag-icon"><use href="#icon-wheat" /></svg>
+        <span>INVITA-WheatFieldState</span>
+      </a>
+      <nav aria-label="Page sections">
+        <a href="#overview">Overview</a>
+        <a href="#assets">Assets</a>
+        <a href="#tasks">Targets</a>
+        <a href="#paper">Release</a>
+        <a href="#code">Code</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="notebook-hero">
+        <div class="variant-shell notebook-hero-grid">
+          <div>
+            <p class="variant-eyebrow">Wheat Field-Trial Benchmark</p>
+            <h1 class="variant-title">INVITA-WheatFieldState</h1>
+            <p class="variant-subtitle">
+              A Real-World Benchmark for Crop-State Estimation in Wheat Field Trials.
+            </p>
+            <p class="variant-lead">
+              INVITA-WheatFieldState converts a governed wheat field-trial archive into
+              plot-date crop-state estimation tasks for canopy greenness, canopy amount,
+              canopy closure, and phenological stage. Each target links a wheat plot on a
+              target date to provenance-tracked trial assets under temporal and
+              source-provenance policies that preserve real missing-modality structure.
+            </p>
+            <div class="variant-actions" aria-label="Project links">
+              <a class="variant-button primary" href="#paper">
+                <svg class="ag-icon"><use href="#icon-clipboard" /></svg>
+                Paper
+              </a>
+              <a class="variant-button" href="https://github.com/Anonymous-Accept/INVITA-WheatFieldState" target="_blank" rel="noreferrer">
+                <svg class="ag-icon"><use href="#icon-wheat" /></svg>
+                Code
+              </a>
+              <a class="variant-button" href="https://github.com/Anonymous-Accept/INVITA-WheatFieldState/blob/main/docs/reviewer_guide.md" target="_blank" rel="noreferrer">
+                <svg class="ag-icon"><use href="#icon-target" /></svg>
+                Release Access
+              </a>
+            </div>
+          </div>
+          <aside class="field-note" aria-label="Benchmark field note">
+            <h2>Field note</h2>
+            <dl>
+              <div>
+                <dt>Prediction unit</dt>
+                <dd>Wheat plot on a target date.</dd>
+              </div>
+              <div>
+                <dt>Targets</dt>
+                <dd>NDVI, LAI, FCover, and Zadoks growth stage.</dd>
+              </div>
+              <div>
+                <dt>Evidence</dt>
+                <dd>Asynchronous field-trial assets available before the target date.</dd>
+              </div>
+              <div>
+                <dt>Release boundary</dt>
+                <dd>Benchmark code in GitHub; governed field-trial archive separate.</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="variant-section" id="overview">
+        <div class="variant-shell">
+          <div class="notebook-strip" aria-label="Benchmark summary">
+            <article>
+              <strong>227,403</strong>
+              <span>plot-date examples</span>
+            </article>
+            <article>
+              <strong>4</strong>
+              <span>crop-state target families</span>
+            </article>
+            <article>
+              <strong>plot-disjoint</strong>
+              <span>evaluation setting</span>
+            </article>
+            <article>
+              <strong>code-only</strong>
+              <span>anonymous review package</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="variant-section" id="assets">
+        <div class="variant-shell">
+          <p class="variant-eyebrow">Field Assets</p>
+          <h2>Evidence collected around wheat field-trial plots</h2>
+          <p class="variant-lead">
+            The benchmark preserves the mixed field-trial evidence that agronomists encounter in
+            practice: weather context, trial metadata, aerial and ground imagery, sensor readings,
+            canopy products/proxies, and field surveys with naturally irregular timing and modality
+            coverage.
+          </p>
+          <div class="icon-grid" aria-label="Field asset types">
+            <article class="icon-tile">
+              <svg class="ag-icon"><use href="#icon-cloud" /></svg>
+              <div>
+                <h3>Weather history</h3>
+                <p>Daily weather context used as asynchronous pre-target evidence.</p>
+              </div>
+            </article>
+            <article class="icon-tile">
+              <svg class="ag-icon"><use href="#icon-drone" /></svg>
+              <div>
+                <h3>UAV observations</h3>
+                <p>Overhead field observations aligned to plot and date under the temporal policy.</p>
+              </div>
+            </article>
+            <article class="icon-tile">
+              <svg class="ag-icon"><use href="#icon-camera" /></svg>
+              <div>
+                <h3>Field-camera imagery</h3>
+                <p>Ground-level canopy evidence with irregular timing and incomplete coverage.</p>
+              </div>
+            </article>
+            <article class="icon-tile">
+              <svg class="ag-icon"><use href="#icon-satellite" /></svg>
+              <div>
+                <h3>Satellite observations</h3>
+                <p>Remote-sensing evidence linked to plot-date examples without future observations.</p>
+              </div>
+            </article>
+            <article class="icon-tile">
+              <svg class="ag-icon"><use href="#icon-sensor" /></svg>
+              <div>
+                <h3>GreenSeeker readings</h3>
+                <p>Proximal canopy sensing that complements image and weather evidence.</p>
+              </div>
+            </article>
+            <article class="icon-tile">
+              <svg class="ag-icon"><use href="#icon-leaf" /></svg>
+              <div>
+                <h3>Canopy products/proxies</h3>
+                <p>Derived canopy signals retained with provenance labels for interpretation.</p>
+              </div>
+            </article>
+            <article class="icon-tile">
+              <svg class="ag-icon"><use href="#icon-clipboard" /></svg>
+              <div>
+                <h3>Trial metadata</h3>
+                <p>Structured field-trial context for plots, dates, and crop-state targets.</p>
+              </div>
+            </article>
+            <article class="icon-tile">
+              <svg class="ag-icon"><use href="#icon-target" /></svg>
+              <div>
+                <h3>Field surveys</h3>
+                <p>Human-recorded trial observations represented as part of the archive.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="variant-section">
+        <div class="variant-shell">
+          <p class="variant-eyebrow">Benchmark Construction</p>
+          <h2>From wheat field-trial archive to crop-state benchmark</h2>
+          <figure class="figure-clean">
+            <img
+              src="assets/figures/teaser.png"
+              width="2560"
+              height="1134"
+              alt="Benchmark construction overview for INVITA-WheatFieldState."
+            />
+            <figcaption>
+              The benchmark starts from wheat field-trial assets and converts them into
+              policy-filtered plot-date examples with targets, evaluation code, rule checks, and
+              diagnostics.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="variant-section" id="tasks">
+        <div class="variant-shell notebook-two-col">
+          <div>
+            <p class="variant-eyebrow">Crop-State Targets</p>
+            <h2>Canopy and phenology targets</h2>
+            <p class="variant-lead">
+              Targets are framed as crop-state signals observed in wheat field trials, covering
+              canopy greenness, canopy amount, ground cover, and phenological development.
+            </p>
+          </div>
+          <ul class="target-list">
+            <li>
+              <svg class="ag-icon"><use href="#icon-leaf" /></svg>
+              <div><strong>NDVI</strong><br /><span>Canopy greenness and vegetation vigor.</span></div>
+            </li>
+            <li>
+              <svg class="ag-icon"><use href="#icon-wheat" /></svg>
+              <div><strong>LAI</strong><br /><span>Canopy amount and light-interception capacity.</span></div>
+            </li>
+            <li>
+              <svg class="ag-icon"><use href="#icon-target" /></svg>
+              <div><strong>FCover</strong><br /><span>Fractional canopy cover and ground closure.</span></div>
+            </li>
+            <li>
+              <svg class="ag-icon"><use href="#icon-clipboard" /></svg>
+              <div><strong>Growth stage</strong><br /><span>Phenological development on the Zadoks scale.</span></div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="variant-section">
+        <div class="variant-shell notebook-two-col">
+          <div>
+            <p class="variant-eyebrow">Evidence Policy</p>
+            <h2>Asynchronous wheat-trial evidence with missing modalities</h2>
+            <p>
+              Field observations arrive at different dates and from different acquisition systems.
+              The benchmark admits only evidence available before each target date, excludes
+              same-source shortcuts, and keeps incomplete UAV, satellite, field-camera, sensor,
+              weather, and tabular coverage as part of the real trial setting.
+            </p>
+            <p class="notebook-callout">
+              Evaluation includes all-example evaluation, required-modality subset diagnostics,
+              same-row fusion, and VLM diagnostics.
+            </p>
+          </div>
+          <figure class="figure-clean">
+            <img
+              src="assets/figures/plot-date-timeline.png"
+              width="2560"
+              height="1285"
+              alt="Plot-date timeline showing asynchronous field evidence and weather observations."
+            />
+            <figcaption>
+              The field-trial archive contains asynchronous UAV, satellite, field-camera, and weather
+              observations around each target date.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="variant-section" id="paper">
+        <div class="variant-shell notebook-two-col">
+          <div>
+            <p class="variant-eyebrow">Paper And Release</p>
+            <h2>Benchmark code here, governed field-trial archive separate</h2>
+            <p>
+              <strong>INVITA-WheatFieldState: A Real-World Benchmark for Crop-State Estimation in
+              Wheat Field Trials.</strong> Author and citation metadata are withheld during anonymous
+              review. Raw wheat field-trial records, private source ledgers, and governed derived
+              release materials are managed outside Git and accessed through the release instructions.
+            </p>
+          </div>
+          <div class="repo-list" id="code" aria-label="Repository code paths">
+            <a href="https://github.com/Anonymous-Accept/INVITA-WheatFieldState/tree/main/src/benchmarks/baselines" target="_blank" rel="noreferrer"><span>Baseline evaluation code</span><code>src/benchmarks/baselines/</code></a>
+            <a href="https://github.com/Anonymous-Accept/INVITA-WheatFieldState/tree/main/src/benchmarks/neural_baselines" target="_blank" rel="noreferrer"><span>Learning-based diagnostics</span><code>src/benchmarks/neural_baselines/</code></a>
+            <a href="https://github.com/Anonymous-Accept/INVITA-WheatFieldState/tree/main/experiments/runs" target="_blank" rel="noreferrer"><span>Reproducibility commands</span><code>experiments/runs/</code></a>
+            <a href="https://github.com/Anonymous-Accept/INVITA-WheatFieldState/tree/main/src/data_processing/loaders" target="_blank" rel="noreferrer"><span>Release loaders</span><code>src/data_processing/loaders/</code></a>
+            <a href="https://github.com/Anonymous-Accept/INVITA-WheatFieldState/tree/main/src/data_processing/qa_generation" target="_blank" rel="noreferrer"><span>VLM diagnostics</span><code>src/data_processing/qa_generation/</code></a>
+            <a href="https://github.com/Anonymous-Accept/INVITA-WheatFieldState/blob/main/docs/reviewer_guide.md" target="_blank" rel="noreferrer"><span>Release and reproduction guide</span><code>docs/reviewer_guide.md</code></a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
